@@ -4,65 +4,47 @@
 ## <a name="MR signal quantities"></a> MR signal quantities
 The items in this group are related to the MR signal and quantities of the MR sequence used to acquire the signal.
 
-| Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
+| Code | Standardised name| Alternative names|Notation|Description|Standardised units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
-| Q.MS1.001.[j] | <a name="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
-| Q.MS1.002.[j] | <a name="S_BL"></a> Baseline signal | --| *S<sub>BL,j</sub>* | Pre-contrast MR signal (magnitude, phase or complex depending on context) in compartment *j* before the arrival of indicator at the tissue of interest. | a.u. | -- |
-| Q.MS1.003.[j] | <a name="AE"></a> Absolute enhancement | -- | *AE<sub>j</sub>* | The absolute signal change from baseline <img src="https://latex.codecogs.com/svg.image? &#124 S_j-S_{BL,j} &#124 &space;" title="https://latex.codecogs.com/svg.image?&#124 S_j-S_{BL,j}&#124" />  in compartment *j* induced by an indicator. In DCE, the enhancement is positive and in DSC, the enhancement is negative.| a.u. | -- |
-| Q.MS1.004.[j] | <a name="RE"></a> Relative enhancement | -- | *RE<sub>j</sub>* | The relative signal change from baseline <img src="https://latex.codecogs.com/svg.image? &#124\frac{S_j}{S_{BL,j}}-1 &#124 &space;" title="https://latex.codecogs.com/svg.image?&#124\frac{S_j}{S_{BL,j}}-1&#124" /> in compartment *j* induced by the indicator. In DCE, the enhancement is positive and in DSC, the enhancement is negative. | -- | -- |
-| Q.MS1.005 | <a name="TE"></a> Echo time | -- | TE | The time between the application of the radiofrequency excitation pulse and the center of the echo. | ms |-- |
-| Q.MS1.006 | <a name="TR"></a> Repetition time | -- | TR | The time between the beginning of a pulse sequence and the beginning of a succeeding (essentially identical) pulse sequence. | ms | -- |
-| Q.MS1.007 | <a name="Flip angle"></a> Prescribed excitatory flip angle | -- | <img src="https://latex.codecogs.com/svg.image?\alpha&space;" title="https://latex.codecogs.com/svg.image?\alpha " />| The prescribed nutation angle of the net magnetization immediately following an excitation RF pulse. | deg | -- |
-| Q.MS1.008 | <a name="PD"></a> Prepulse delay time | Inversion time TI (in case of an inversion recovery sequence) | PD | The time between the middle of a prepulse (e.g. inversion pulse) and the middle of the pulse that reads out the center of k-space. | ms | -- |
-| Q.MS1.009 | <a name="PF Flip angle"></a> Prepulse flip angle | -- |<img src="https://latex.codecogs.com/svg.image?\alpha_{p}" title="https://latex.codecogs.com/svg.image?\alpha_{p}" /> | The nutation angle of the net magnetization immediately following a prepulse. | deg | -- |
-| Q.MS1.010 | <a name="S_0"></a> Signal scaling factor | -- | *S<sub>0</sub>*  | A constant scaling factor in a signal model. <img src="https://latex.codecogs.com/svg.image?S_0" title="https://latex.codecogs.com/svg.image?S_0" /> typically includes contributions from the receiver gain, the proton density and the coil sensitivities. | -- | -- |
-| Q.MS1.011 | <a name="n k-space"></a> Number of lines to k-space center | --| *n* | The number of lines to *k*-space center in the phase encoding direction. | -- | -- |
-| Q.MS1.012 | <a name="N k-space"></a> Total number of k-space lines | -- | *N* | The total number of phase encoding lines for acquiring an image. | -- | -- |
+| CAPLEX:Q.MS1.001.[j] | <a name="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
+| CAPLEX:Q.MS1.005 | <a name="TE"></a> Echo time | -- | TE | The time between the application of the radiofrequency excitation pulse and the center of the echo. | ms |-- |
+| CAPLEX:Q.MS1.006 | <a name="TR"></a> Repetition time | -- | TR | The time between the beginning of a pulse sequence and the beginning of a succeeding (essentially identical) pulse sequence. | ms | -- |
+| CAPLEX:Q.MS1.007 | <a name="Flip angle"></a> Prescribed excitatory flip angle | -- | <img src="https://latex.codecogs.com/svg.image?\alpha&space;" title="https://latex.codecogs.com/svg.image?\alpha " />| The prescribed nutation angle of the net magnetization immediately following an excitation RF pulse. | deg | -- 
+| CAPLEX:Q.MS1.008 | <a name="PD"></a> Prepulse delay time | Inversion time TI (in case of an inversion recovery sequence) | PD | The time between the middle of a prepulse (e.g. inversion pulse) and the middle of the pulse that reads out the center of k-space. | ms | -- |
+| CAPLEX:Q.MS1.009 | <a name="PF Flip angle"></a> Prepulse flip angle | -- |<img src="https://latex.codecogs.com/svg.image?\alpha_{p}" title="https://latex.codecogs.com/svg.image?\alpha_{p}" /> | The nutation angle of the net magnetization immediately following a prepulse. | deg | -- |
+| CAPLEX:Q.MS1.010 | <a name="S_0"></a> Signal scaling factor | -- | *S<sub>0</sub>*  | A constant scaling factor in a signal model. <img src="https://latex.codecogs.com/svg.image?S_0" title="https://latex.codecogs.com/svg.image?S_0" /> typically includes contributions from the receiver gain, the proton density and the coil sensitivities. | -- | -- |
+| CAPLEX:Q.MS1.011 | <a name="n k-space"></a> Number of lines to k-space center | --| *n* | The number of lines to *k*-space center in the phase encoding direction. | -- | -- |
+| CAPLEX:Q.MS1.012 | <a name="N k-space"></a> Total number of k-space lines | -- | *N* | The total number of phase encoding lines for acquiring an image. | -- | -- |
+| DIFFUSIONLEX:Q.MS1.001 | <a name="Big Delta"></a>  Diffusion time | *\Delta* | The time interval between bi-polar diffusion encoding gradient | ms | -- |
+| DIFFUSIONLEX:Q.MS1.002 | <a name="Little Delta"></a>  Diffusion gradient duration | *\delta* | The duration of the diffusion encoding gradient | ms | -- |
+| DIFFUSIONLEX:Q.MS1.003 | <a name="Diffusion gradient strength"></a>  Diffusion gradient strength | *\G* | The strength of the diffusion encoding gradient | mT/m | -- |
+| DIFFUSIONLEX:Q.MS1.004 | <a name="b"></a>  b-value | *b-value* | A factor that reflects the strength and timing of the gradients used to generate diffusion-weighted images |  s/mm² | -- |
 | Q.MS1.999 | <a name="not listed MS1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 ## <a name="Electromagnetic quantities"></a> Electromagnetic quantities
-The items in this group are related to electromagnetic tissue properties and electromagnetic properties of contrast agents. The abbreviations SE and GE denote spin and gradient echo.
+The items in this group are related to electromagnetic tissue properties. The abbreviations SE and GE denote spin and gradient echo.
 
 | Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
-| Q.EL1.001.[j]| <a name="R1"></a> Longitudinal relaxation rate | *R<sub>1</sub>* -relaxation rate | *R<sub>1,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
-| Q.EL1.002.[j] | <a name="R10"></a> Native longitudinal relaxation rate |Baseline *R<sub>1</sub>* | *R<sub>10,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
-| Q.EL1.003.[j] | <a name="DeltaR1"></a> Change in longitudinal relaxation rate  | -- | *&#916 R<sub>1,j</sub>* | Change in longitudinal relaxation rate with respect to *R<sub>10,j</sub>* in compartment *j*. | 1/s | -- |
-| Q.EL1.004.[j] | <a name="R2"></a>  Transverse relaxation rate (SE) | *R<sub>2</sub>*-relaxation rate | *R<sub>2,j</sub>* | Natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
-| Q.EL1.005.[j] | <a name="R20"></a> Native transverse relaxation rate (SE) |Baseline *R<sub>2</sub>*-relaxation rate | *R<sub>20,j</sub>* | Pre-contrast natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
-| Q.EL1.006.[j] | <a name="DeltaR2"></a> Change in transverse relaxation rate (SE)  | -- | *&#916 R<sub>2,j</sub>* | Change in natural transverse relaxation rate (observed using a SE) with respect to *R<sub>20</sub>* in compartment *j*. | 1/s | -- |
-| Q.EL1.007.[j] | <a name="R2Star"></a> Transverse relaxation rate (GE) | *R<sub>2</sub><sup>*</sup>*-relaxation rate | *R<sub>2,j</sub><sup>*</sup>* | Effective transverse relaxation rate (observed using a GE) in compartment *j*. | 1/s | -- |
-| Q.EL1.008.[j] | <a name="R2Star0"></a> Native transverse relaxation rate (GE) | Baseline *R<sub>2</sub><sup>*</sup>* | *R<sub>20,j</sub><sup>*</sup>* | Pre-contrast effective transverse relaxation rate (observed using a GE) in compartment *j*. | 1/s | -- |
-| Q.EL1.009.[j] | <a name="DeltaR2Star"></a> Change in transverse relaxation rate (GE) | -- | *&#916 R<sub>2,j</sub><sup>*</sup>* | Change in effective transverse relaxation rate (observed using a GE) with respect to *R<sub>20</sub><sup>*</sup>* in compartment *j*.| 1/s | -- |
-| Q.EL1.010 | <a name="R2ref"></a> Change in a reference transverse relaxation rate  | -- | <img src="https://latex.codecogs.com/svg.image?\overline{\Delta&space;R_{2,ref}^*}" title="https://latex.codecogs.com/svg.image?\overline{\Delta R_{2,ref}^*}" /> | Average change in effective transverse relaxation rate in a reference area with no indicator extravasation. | 1/s | -- |
-| Q.EL1.011.[j] | <a name="Chi"></a> Molar magnetic susceptibility | -- | *&#967<sub>j</sub>* | Molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
-| Q.EL1.012.[j] | <a name="Chi0"></a> Native molar magnetic susceptibility | Baseline *&#967 | *&#967<sub>0,j</sub>* | Pre-contrast molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
-| Q.EL1.013.[j] |  <a name="DeltaChi"></a> Change in molar magnetic susceptibility | -- | *&#916 &#967<sub>j</sub>* | Change in molar magnetic susceptibility with respect to *&#967<sub>0</sub>* in compartment *j*.  | mL/mol | -- |
-| Q.EL1.014.[j] | <a name="DelChi"></a>  Molar magnetic susceptibility change per unit concentration of indicator | -- | *&#948 &#967<sub>j</sub>* | Molar magnetic susceptibility change per unit concentration of indicator in compartment *j*. | mL/mol/mM| -- |
-| Q.EL1.015.[j] | <a name="r1"></a> Longitudinal relaxivity | *r<sub>1</sub>* -relaxivity | *r<sub>1,j</sub>* | Longitudinal relaxivity in compartment *j*. | 1/s/mM | -- |
-| Q.EL1.016.[j] | <a name="r2"></a> Transverse relaxivity (SE) | *r<sub>2</sub>* -relaxivity | *r<sub>2,j</sub>*  | Transverse relaxivity (observed using a SE) in compartment *j*. | 1/s/mM | -- |
-| Q.EL1.017 | <a name="r2star"></a> Transverse relaxivity (GE) | *r<sub>2</sub><sup>*</sup>* -relaxivity | *r<sub>2</sub><sup>*</sup>* | Transverse relaxivity (observed using a GE) in the voxel. | 1/s/mM | -- |
-| Q.EL1.018 | <a name="r1f"></a> Longitudinal relaxivity of free indicator | -- |  *r<sub>1,f</sub>* | Longitudinal relaxivity of free (unbound) indicator. | 1/s/mM | -- |
-| Q.EL1.019 | <a name="r1b"></a> Longitudinal relaxivity of bound indicator | -- | *r<sub>1,b</sub>*  | Longitudinal relaxivity of bound indicator. | 1/s/mM | -- |
-| Q.EL1.020 | <a name="k1k2"></a> Transverse relaxivities of the quadratic model (GE) | -- | [*k<sub>1</sub>*,k<sub>2</sub>] | First and second order relaxivities for the quadratic model of the transverse relaxation rate (GE) | [1/s/mM,1/s/mM]| -- |
+| CAPLEX:Q.EL1.001.[j]| <a name="R1"></a> Longitudinal relaxation rate | *R<sub>1</sub>* -relaxation rate | *R<sub>1,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
+| CAPLEX:Q.EL1.004.[j] | <a name="R2"></a>  Transverse relaxation rate (SE) | *R<sub>2</sub>*-relaxation rate | *R<sub>2,j</sub>* | Natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
+| CAPLEX:Q.EL1.007.[j] | <a name="R2Star"></a> Transverse relaxation rate (GE) | *R<sub>2</sub><sup>*</sup>*-relaxation rate | *R<sub>2,j</sub><sup>*</sup>* | Effective transverse relaxation rate (observed using a GE) in compartment *j*. | 1/s | -- |
+| CAPLEX:Q.EL1.011.[j] | <a name="Chi"></a> Molar magnetic susceptibility | -- | *&#967<sub>j</sub>* | Molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
+
 | Q.EL1.999 | <a name="not listed EL1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
-
-## <a name="Indicator concentration quantities"></a> Indicator concentration quantities
-The items of this group of quantities are either measured or modeled quantities used when pharmacokinetic modeling is applied. This section is split into the subsections indicator kinetic model quantities and AIF model quantities. The latter contains only quantities specific to often used AIF models.
-
-### <a name="Indicator kinetic model quantities"></a>  Indicator kinetic model quantities
+## <a name="DTI model quantities"></a>  Diffusion tensor imaging model quantities
 The items of this group of quantities are either measured or modeled quantities used when pharmacokinetic modeling is applied.
 
 | Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
-| Q.IC1.001.[j] | <a name="C"></a> Indicator concentration | -- | *C<sub>j</sub>* | Concentration of indicator molecules in compartment *j*. | mM | -- |
-| Q.IC1.002 | <a name="R"></a> Tissue residue function| -- | *R* | Fraction of indicator molecules entering a volume of distribution at time t=0 that are still present at time t. | -- | -- |
-| Q.IC1.003 | <a name="h"></a> Tissue transit time distribution| -- | *h* | Probability distribution of transit times through volume of interest.  | -- | -- |
-| Q.IC1.004 | <a name="ha"></a> Arterial transit time distribution | -- | *h<sub>a</sub>* |Probability distribution of transit times through the arterial tree (between AIF location and tissue of interest). | -- | -- |
-| Q.IC1.005 | <a name="IRF"></a> Tissue impulse response function | *IRF* | *I* |Defined by the relationship <img src="https://latex.codecogs.com/svg.image?C_t=I\otimes&space;C_{a,p}" title="https://latex.codecogs.com/svg.image?C_t=I\otimes C_{a,p}" /> . | 1/s | -- |
-| Q.IC1.006 | <a name="IRFGeneral"></a> General impulse response function |*IRF* | *I* |Defined by the relationship <img src="https://latex.codecogs.com/svg.image?C_x=I\otimes&space;C_y" title="https://latex.codecogs.com/svg.image?C_x=I\otimes C_y" /> . | 1/s | -- |
-| Q.IC1.999 | <a name="not listed IC1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
+| DIFFUSIONLEX:Q.DTI1.001 | <a name="D"></a> Apparent diffusion coefficient | Trace | *ADC* | The diffusion coefficient of water as observed in a diffusion-weighted MRI averaged over the three principal directions (i.e. the mean of the 3 tensor eignevalues). The "Apparent" describes the fact that water in biological tissues is hindered/restricted and hence appears lower than it would in a freely diffusing environment  | mm²/s | -- |
+| DIFFUSIONLEX:Q.DTI1.002 | <a name="D"></a> Diffusion Tensor | -- | **D** | A 3 x 3 symmetric tensor matrix containing elements (Dxx, Dxy, Dxz, etc) representing observed diffusion coefficients along different directions in anisotropic media. | mm²/s | -- |
+| DIFFUSIONLEX:Q.DTI1.003 | <a name="Dr"></a> Diffusion Tensor | -- | D_{r} | The diffusion coefficient of water as observed in a diffusion-weighted MRI in a direction perpendicular to a fibre of interest | mm²/s | -- |
+| DIFFUSIONLEX:Q.DTI1.004 | <a name="Da"></a> Diffusion Tensor | -- | D_{a} | The diffusion coefficient of water as observed in a diffusion-weighted MRI along the axis of a fibre of interest | mm²/s | -- |
+
+| DIFFUSIONLEX:Q.DTI1.003 | <a name="FA"></a> Fractional Anistropy | -- | *FA* | A scalar value between zero and one that describes the degree of anisotropy of a diffusion process. FA = \sqrt{\frac{\lambda_{1}}{\lambda_{2}}} | n.a. | -- |
+| Q.DTI1.999 | <a name="not listed IC1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
 ## <a name="Physiological quantities"></a> Physiological quantities
