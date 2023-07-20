@@ -15,10 +15,10 @@ The items in this group are related to the MR signal and quantities of the MR se
 | CAPLEX:Q.MS1.010 | <a name="S_0"></a> Signal scaling factor | -- | *S<sub>0</sub>*  | A constant scaling factor in a signal model. <img src="https://latex.codecogs.com/svg.image?S_0" title="https://latex.codecogs.com/svg.image?S_0" /> typically includes contributions from the receiver gain, the proton density and the coil sensitivities. | -- | -- |
 | CAPLEX:Q.MS1.011 | <a name="n k-space"></a> Number of lines to k-space center | --| *n* | The number of lines to *k*-space center in the phase encoding direction. | -- | -- |
 | CAPLEX:Q.MS1.012 | <a name="N k-space"></a> Total number of k-space lines | -- | *N* | The total number of phase encoding lines for acquiring an image. | -- | -- |
-| DIFFUSIONLEX:Q.MS1.001 | <a name="Big Delta"></a>  Diffusion time | *\Delta* | The time interval between bi-polar diffusion encoding gradient | ms | -- |
-| DIFFUSIONLEX:Q.MS1.002 | <a name="Little Delta"></a>  Diffusion gradient duration | *\delta* | The duration of the diffusion encoding gradient | ms | -- |
-| DIFFUSIONLEX:Q.MS1.003 | <a name="Diffusion gradient strength"></a>  Diffusion gradient strength | *\G* | The strength of the diffusion encoding gradient | mT/m | -- |
-| DIFFUSIONLEX:Q.MS1.004 | <a name="b"></a>  b-value | *b-value* | A factor that reflects the strength and timing of the gradients used to generate diffusion-weighted images |  s/mm² | -- |
+| DIFFUSIONLEX:Q.MS1.001 | <a name="Big Delta"></a>  Diffusion time | -- |  $\Delta$ | The time interval between bi-polar diffusion encoding gradient | ms | -- |
+| DIFFUSIONLEX:Q.MS1.002 | <a name="Little Delta"></a>  Diffusion gradient duration | -- | $\delta$ | The duration of the diffusion encoding gradient | ms | -- |
+| DIFFUSIONLEX:Q.MS1.003 | <a name="Diffusion gradient strength"></a>  Diffusion gradient strength | -- | *G* | The strength of the diffusion encoding gradient | mT/m | -- |
+| DIFFUSIONLEX:Q.MS1.004 | <a name="b"></a>  b-value | -- | *b-value* | A factor that reflects the strength and timing of the gradients used to generate diffusion-weighted images |  s/mm² | -- |
 | Q.MS1.999 | <a name="not listed MS1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 ## <a name="Electromagnetic quantities"></a> Electromagnetic quantities
@@ -29,37 +29,29 @@ The items in this group are related to electromagnetic tissue properties. The ab
 | CAPLEX:Q.EL1.001.[j]| <a name="R1"></a> Longitudinal relaxation rate | *R<sub>1</sub>* -relaxation rate | *R<sub>1,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
 | CAPLEX:Q.EL1.004.[j] | <a name="R2"></a>  Transverse relaxation rate (SE) | *R<sub>2</sub>*-relaxation rate | *R<sub>2,j</sub>* | Natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
 | CAPLEX:Q.EL1.007.[j] | <a name="R2Star"></a> Transverse relaxation rate (GE) | *R<sub>2</sub><sup>*</sup>*-relaxation rate | *R<sub>2,j</sub><sup>*</sup>* | Effective transverse relaxation rate (observed using a GE) in compartment *j*. | 1/s | -- |
-| CAPLEX:Q.EL1.011.[j] | <a name="Chi"></a> Molar magnetic susceptibility | -- | *&#967<sub>j</sub>* | Molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
-
+| CAPLEX:Q.EL1.011.[j] | <a name="Chi"></a> Molar magnetic susceptibility | -- | $\chi_{j}$ | Molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
 | Q.EL1.999 | <a name="not listed EL1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
-## <a name="DTI model quantities"></a>  Diffusion tensor imaging model quantities
+## <a name="Diffusion quantities"></a>  Diffusion tensor imaging model quantities
 The items of this group of quantities are either measured or modeled quantities used when pharmacokinetic modeling is applied.
 
 | Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
 | DIFFUSIONLEX:Q.DTI1.001 | <a name="D"></a> Apparent diffusion coefficient | Trace | *ADC* | The diffusion coefficient of water as observed in a diffusion-weighted MRI averaged over the three principal directions (i.e. the mean of the 3 tensor eignevalues). The "Apparent" describes the fact that water in biological tissues is hindered/restricted and hence appears lower than it would in a freely diffusing environment  | mm²/s | -- |
 | DIFFUSIONLEX:Q.DTI1.002 | <a name="D"></a> Diffusion Tensor | -- | **D** | A 3 x 3 symmetric tensor matrix containing elements (Dxx, Dxy, Dxz, etc) representing observed diffusion coefficients along different directions in anisotropic media. | mm²/s | -- |
-| DIFFUSIONLEX:Q.DTI1.003 | <a name="Dr"></a> Diffusion Tensor | -- | D_{r} | The diffusion coefficient of water as observed in a diffusion-weighted MRI in a direction perpendicular to a fibre of interest | mm²/s | -- |
-| DIFFUSIONLEX:Q.DTI1.004 | <a name="Da"></a> Diffusion Tensor | -- | D_{a} | The diffusion coefficient of water as observed in a diffusion-weighted MRI along the axis of a fibre of interest | mm²/s | -- |
-
-| DIFFUSIONLEX:Q.DTI1.003 | <a name="FA"></a> Fractional Anistropy | -- | *FA* | A scalar value between zero and one that describes the degree of anisotropy of a diffusion process. FA = \sqrt{\frac{\lambda_{1}}{\lambda_{2}}} | n.a. | -- |
+| DIFFUSIONLEX:Q.DTI1.003 | <a name="RD"></a> Radial Diffusivity | -- | $D_{r}$ | The diffusion coefficient of water as observed in a diffusion-weighted MRI in a direction perpendicular to of an axonal fibre. Often used as a marker of axonal integrity. | mm²/s | -- |
+| DIFFUSIONLEX:Q.DTI1.004 | <a name="AD"></a> Axial Diffusivity | -- | $D_{a}$ | The diffusion coefficient of water as observed in a diffusion-weighted MRI along parralel to the axis of an axonal fibre. | mm²/s | -- |
+| DIFFUSIONLEX:Q.DTI1.003 | <a name="FA"></a> Fractional Anistropy | -- | *FA* | A scalar value between 0 and 1 that describes the degree of anisotropy of a diffusion process. $$FA = \frac{\sqrt{(\lambda_{1} - \lambda_{2}) + (\lambda_{2} - \lambda_{3}) + (\lambda_{1} - \lambda_{3})}}{\sqrt{2}\lambda_{1} + \lambda_{2} + \lambda_{3}}$$ | n.a. | -- |
 | Q.DTI1.999 | <a name="not listed IC1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
-## <a name="Physiological quantities"></a> Physiological quantities
+## <a name="Microstructure quantities"></a> Microstructure quantities
 In this group commonly used quantities with a physiological meaning are listed.
 
 | Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
 | Q.PH1.001.[j] | <a name="v"></a> Relative volume fraction | -- | *v<sub>j</sub>* | The relative volume fraction of compartment *j*. Only capillary vasculature is considered, thus the *c* subscript is dropped. | mL/100mL | -- |
-| Q.PH1.002 | <a name="Fp"></a> Blood plasma flow| -- | *F<sub>p</sub>* | The volume of blood plasma flowing into a unit tissue volume per unit time. The flow inputs and exits the capillary vasculature. | mL/min/100mL | -- |
-| Q.PH1.003 | <a name="Fb"></a> Blood flow | Cerebral blood flow (CBF) | *F<sub>b</sub>* | The volume of blood flowing into a unit tissue volume per unit time. The flow inputs and exits the capillary vasculature. | mL/min/100mL | -- |
-| Q.PH1.004 | <a name="PS"></a> Permeability surface area product | Extraction flow (FE) | *PS* | The volume of tissue plasma that is fully cleared of indicator in a unit of time by a unit tissue volume. | mL/min/100mL | -- |
-| Q.PH1.005 | <a name="E"></a> Extraction fraction | -- | *E*  | The fraction of indicator particles that is extracted from plasma in one pass through the vasculature. | -- | -- |
-| Q.PH1.006.[j] | <a name="MTT"></a> Mean transit time| -- | *MTT<sub>j</sub>* | The average time the indicator spends in compartment *j* before exchanging into another compartment. | s | -- |
 | Q.PH1.007 | <a name="Ta"></a> Arterial delay time | -- | *T<sub>a</sub>*  | Delay between indicator arrival at the arterial input function location and the voxel or tissue region of interest. | s | -- |
-| Q.PH1.008 | <a name="Ktrans"></a> Volume transfer constant | Transfer constant | *K<sup>trans</sup>* | The rate of indicator particle delivery from the blood plasma to the extravascular, extracellular volume per unit of tissue volume, per unit arterial plasma concentration. | 1/min | -- |
 | Q.PH1.009.[j] | <a name="k"></a> Indicator exchange rate | -- | *k<sub>j</sub>*  | Indicator exchange  rate constant between two compartments (e.g. *k<sub>e &#8594 b</sub>*) | 1/s | -- |
 | Q.PH1.010.[j] | <a name="kw"></a> Water exchange rate  | *k<sub>in</sub>*, *k<sub>out</sub>* | *k<sub>w,j</sub>* | Equilibrium water exchange rate between two compartments  (e.g. *k<sub>w, e &#8594 b</sub>*)  | 1/s | -- |
 | Q.PH1.011 | <a name="rho"></a> Density | -- | *&#961* | The density of the tissue of interest. | g/mL | -- |
@@ -67,6 +59,34 @@ In this group commonly used quantities with a physiological meaning are listed.
 | Q.PH1.013 | <a name="Hctf"></a> Hematocrit factor|-- | *Hct<sub>f</sub>* | Blood flow correction factor accounting for the difference in arterial hematocrit *Hct<sub>a</sub>* and capillary hematocrit *Hct<sub>c</sub>*.| -- | -- |
 | Q.PH1.014 | <a name="CTTH"></a> Capillary transit time heterogeneity | -- | *CTTH* | Standard deviation of the capillary transit time distribution.| s | -- |
 | Q.PH1.015 | <a name="OEFmax"></a> Maximum oxygen extraction fraction| -- | OEF<sup>max</max> | Upper biophysical limit of the proportion of oxygen that can be extracted by tissue. | -- | --|
+| Q.PH1.999 | <a name="not listed PH1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
+
+## <a name="Exchange quantities"></a> Exchange quantities
+In this group commonly used quantities relating to exchange of water across cell membranes are described.
+| Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
+| -- | -- | -- | -- | -- | -- | -- |
+| Q.PH1.010.[j] | <a name="kw"></a> Water exchange rate  | *k<sub>in</sub>*, *k<sub>out</sub>* | *k<sub>w,j</sub>* | Equilibrium water exchange rate between two compartments  (e.g. *k<sub>w, e &#8594 b</sub>*)  | 1/s | -- |
+| Q.EX1.001 | <a name="AXR"></a> Apparent exchange rate | -- | AXR  | The apparent exchange rate of water across a membrane observed using filtered exchange imaging. $$AXR = k_in + k_out$$. | 1/min | -- |
+| Q.EX1.001 | <a name="filter_eff"></a> Filter efficiency | -- | $\sigma$ | The ratio of diffusivity at very short mixing time with and without the diffusion filter in FEXI experiment | a.u. | -- |
+| Q.PH1.004 | <a name="PS"></a> Permeability surface area product | Extraction flow (FE) | *PS* | The volume of tissue plasma that is fully cleared of indicator in a unit of time by a unit tissue volume. | mL/min/100mL | -- |
+| Q.PH1.005 | <a name="E"></a> Extraction fraction | -- | *E*  | The fraction of indicator particles that is extracted from plasma in one pass through the vasculature. | -- | -- |
+| Q.PH1.008 | <a name="Ktrans"></a> Volume transfer constant | Transfer constant | *K<sup>trans</sup>* | The rate of indicator particle delivery from the blood plasma to the extravascular, extracellular volume per unit of tissue volume, per unit arterial plasma concentration. | 1/min | -- |
+| Q.PH1.015 | <a name="OEFmax"></a> Maximum oxygen extraction fraction| -- | OEF<sup>max</max> | Upper biophysical limit of the proportion of oxygen that can be extracted by tissue. | -- | --|
+| Q.PH1.999 | <a name="not listed PH1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
+
+## <a name="Flow quantities"></a> Flow quantities
+In this group commonly used quantities related to vascular, interstitial, or CSF flow are described.
+| Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
+| -- | -- | -- | -- | -- | -- | -- |
+| Q.PH1.006.[j] | <a name="MTT"></a> Mean transit time| -- | *MTT<sub>j</sub>* | The average time the indicator spends in compartment *j* before exchanging into another compartment. | s | -- |
+Q.PH1.003 | <a name="Fb"></a> Blood flow | Cerebral blood flow (CBF) | *F<sub>b</sub>* | The volume of blood flowing into a unit tissue volume per unit time. The flow inputs and exits the capillary vasculature. | mL/min/100mL | -- |
+| Q.PH1.006.[j] | <a name="MTT"></a> Mean transit time| -- | *MTT<sub>j</sub>* | The average time the indicator spends in compartment *j* before exchanging into another compartment. | s | -- |
+| Q.PH1.014 | <a name="CTTH"></a> Capillary transit time heterogeneity | -- | *CTTH* | Standard deviation of the capillary transit time distribution.| s | -- |
+| DIFFUSIONLEX:Q.Ex1.001.[j] | <a name="v"></a> Relative volume fraction | -- | *v<sub>j</sub>* | The relative volume fraction of compartment *j*. Only capillary vasculature is considered, thus the *c* subscript is dropped. | mL/100mL | -- |
+| DIFFUSIONLEX:Q.Ex1.003 | <a name="Fb"></a> Blood flow | Cerebral blood flow (CBF) | *F<sub>b</sub>* | The volume of blood flowing into a unit tissue volume per unit time. The flow inputs and exits the capillary vasculature. | mL/min/100mL | -- |
+| Q.PH1.007 | <a name="Ta"></a> Arterial delay time | -- | *T<sub>a</sub>*  | Delay between indicator arrival at the arterial input function location and the voxel or tissue region of interest. | s | -- |
+| Q.PH1.012.[j] | <a name="Hct"></a> Hematocrit | -- | *Hct<sub>j</sub>*  | The volume percentage of red blood cells in the blood compartment *j*. | -- | -- |
+| Q.PH1.013 | <a name="Hctf"></a> Hematocrit factor|-- | *Hct<sub>f</sub>* | Blood flow correction factor accounting for the difference in arterial hematocrit *Hct<sub>a</sub>* and capillary hematocrit *Hct<sub>c</sub>*.| -- | -- |
 | Q.PH1.999 | <a name="not listed PH1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
