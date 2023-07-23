@@ -2,7 +2,7 @@
 
 ## Overview 
 
-The ISMRM Open Science Initiative for Perfusion Imaging (OSIPI) began developing lexicon for perfusion MRI. This is the beginnings of an extension to diffusion MRI.  
+The ISMRM Open Science Initiative for Perfusion Imaging (OSIPI) began developing a lexicon for perfusion MRI. This is the beginnings of an extension to diffusion MRI.  
 
 ## Repository contents
 The repo is in development but currently contains:
