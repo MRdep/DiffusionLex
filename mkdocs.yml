@@ -1,20 +1,21 @@
-site_name: Contrast-agent based perfusion MRI lexicon (CAPLEX) v1.0.1
-site_description: CAPLEX
-site_author: Open Science Initiative for Perfusion Imaging (OSIPI)
+site_name: Diffusion MRI lexicon (DiffusionLex) v1.0.0
+site_description: DiffusionLex
+site_author: Ben Dickie
 
 theme:
   name: material
-  logo: OSIPI_logo.png
+  logo: 
 
 docs_dir: docs
 
 nav:
   - Introduction: index.md
   - Section Q- Quantities: quantities.md
-  - Section P-Perfusion processes: perfusionProcesses.md
+  <!-- 
+  - Section P-Perfusion processes: perfusionProcesses.md 
   - Section M-Perfusion models: perfusionModels.md
-  - Section G-General purpose processes: generalPurposeProcesses.md
-
+  - Section G-General purpose processes: generalPurposeProcesses.md 
+  -->
 plugins:
   - search:
       lang: en
