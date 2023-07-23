@@ -1,36 +1,16 @@
 
 # Sections Q: Quantities
 
-## <a name="MR signal quantities"></a> MR signal quantities
-The items in this group are related to the MR signal and quantities of the MR sequence used to acquire the signal.
+## <a name="MRI sequence quantities"></a> MRI sequence quantities
+The items in this group are related to the MR sequence used to acquire the signal.
 
 | Code | Standardised name| Alternative names|Notation|Description|Standardised units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
-| CAPLEX:Q.MS1.001.[j] | <a name="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
-| CAPLEX:Q.MS1.005 | <a name="TE"></a> Echo time | -- | TE | The time between the application of the radiofrequency excitation pulse and the center of the echo. | ms |-- |
-| CAPLEX:Q.MS1.006 | <a name="TR"></a> Repetition time | -- | TR | The time between the beginning of a pulse sequence and the beginning of a succeeding (essentially identical) pulse sequence. | ms | -- |
-| CAPLEX:Q.MS1.007 | <a name="Flip angle"></a> Prescribed excitatory flip angle | -- | <img src="https://latex.codecogs.com/svg.image?\alpha&space;" title="https://latex.codecogs.com/svg.image?\alpha " />| The prescribed nutation angle of the net magnetization immediately following an excitation RF pulse. | deg | -- 
-| CAPLEX:Q.MS1.008 | <a name="PD"></a> Prepulse delay time | Inversion time TI (in case of an inversion recovery sequence) | PD | The time between the middle of a prepulse (e.g. inversion pulse) and the middle of the pulse that reads out the center of k-space. | ms | -- |
-| CAPLEX:Q.MS1.009 | <a name="PF Flip angle"></a> Prepulse flip angle | -- |<img src="https://latex.codecogs.com/svg.image?\alpha_{p}" title="https://latex.codecogs.com/svg.image?\alpha_{p}" /> | The nutation angle of the net magnetization immediately following a prepulse. | deg | -- |
-| CAPLEX:Q.MS1.010 | <a name="S_0"></a> Signal scaling factor | -- | *S<sub>0</sub>*  | A constant scaling factor in a signal model. <img src="https://latex.codecogs.com/svg.image?S_0" title="https://latex.codecogs.com/svg.image?S_0" /> typically includes contributions from the receiver gain, the proton density and the coil sensitivities. | -- | -- |
-| CAPLEX:Q.MS1.011 | <a name="n k-space"></a> Number of lines to k-space center | --| *n* | The number of lines to *k*-space center in the phase encoding direction. | -- | -- |
-| CAPLEX:Q.MS1.012 | <a name="N k-space"></a> Total number of k-space lines | -- | *N* | The total number of phase encoding lines for acquiring an image. | -- | -- |
 | DIFFUSIONLEX:Q.MS1.001 | <a name="Big Delta"></a>  Diffusion time | -- |  $\Delta$ | The time interval between bi-polar diffusion encoding gradient | ms | -- |
 | DIFFUSIONLEX:Q.MS1.002 | <a name="Little Delta"></a>  Diffusion gradient duration | -- | $\delta$ | The duration of the diffusion encoding gradient | ms | -- |
 | DIFFUSIONLEX:Q.MS1.003 | <a name="Diffusion gradient strength"></a>  Diffusion gradient strength | -- | *G* | The strength of the diffusion encoding gradient | mT/m | -- |
 | DIFFUSIONLEX:Q.MS1.004 | <a name="b"></a>  b-value | -- | *b-value* | A factor that reflects the strength and timing of the gradients used to generate diffusion-weighted images |  s/mm² | -- |
-| Q.MS1.999 | <a name="not listed MS1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
-
-## <a name="Electromagnetic quantities"></a> Electromagnetic quantities
-The items in this group are related to electromagnetic tissue properties. The abbreviations SE and GE denote spin and gradient echo.
-
-| Code | OSIPI name| Alternative names|Notation|Description|OSIPI units|Reference|
-| -- | -- | -- | -- | -- | -- | -- |
-| CAPLEX:Q.EL1.001.[j]| <a name="R1"></a> Longitudinal relaxation rate | *R<sub>1</sub>* -relaxation rate | *R<sub>1,j</sub>* | Longitudinal relaxation rate in compartment *j*. | 1/s | -- |
-| CAPLEX:Q.EL1.004.[j] | <a name="R2"></a>  Transverse relaxation rate (SE) | *R<sub>2</sub>*-relaxation rate | *R<sub>2,j</sub>* | Natural transverse relaxation rate (observed using a SE) in compartment *j*. | 1/s | -- |
-| CAPLEX:Q.EL1.007.[j] | <a name="R2Star"></a> Transverse relaxation rate (GE) | *R<sub>2</sub><sup>*</sup>*-relaxation rate | *R<sub>2,j</sub><sup>*</sup>* | Effective transverse relaxation rate (observed using a GE) in compartment *j*. | 1/s | -- |
-| CAPLEX:Q.EL1.011.[j] | <a name="Chi"></a> Molar magnetic susceptibility | -- | $\chi_{j}$ | Molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
-| Q.EL1.999 | <a name="not listed EL1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
+| DIFFUSIONLEX:Q.MS1.999 | <a name="not listed MS1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 ## <a name="Diffusion quantities"></a>  Diffusion tensor imaging model quantities
 The items of this group of quantities are either measured or modeled quantities used when pharmacokinetic modeling is applied.
@@ -43,7 +23,6 @@ The items of this group of quantities are either measured or modeled quantities 
 | DIFFUSIONLEX:Q.DTI1.004 | <a name="AD"></a> Axial Diffusivity | -- | $D_{a}$ | The diffusion coefficient of water as observed in a diffusion-weighted MRI along parralel to the axis of an axonal fibre. | mm²/s | -- |
 | DIFFUSIONLEX:Q.DTI1.003 | <a name="FA"></a> Fractional Anistropy | -- | *FA* | A scalar value between 0 and 1 that describes the degree of anisotropy of a diffusion process. $$FA = \frac{\sqrt{(\lambda_{1} - \lambda_{2}) + (\lambda_{2} - \lambda_{3}) + (\lambda_{1} - \lambda_{3})}}{\sqrt{2}\lambda_{1} + \lambda_{2} + \lambda_{3}}$$ | n.a. | -- |
 | Q.DTI1.999 | <a name="not listed IC1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
-
 
 ## <a name="Microstructure quantities"></a> Microstructure quantities
 In this group commonly used quantities with a physiological meaning are listed.
