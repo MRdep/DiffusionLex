@@ -2,19 +2,18 @@
 
 ## Overview 
 
-The ISMRM Open Science Initiative for Perfusion Imaging (OSIPI) began developing a lexicon for perfusion MRI. This is the beginnings of an extension to diffusion MRI.  
+The ISMRM Open Science Initiative for Perfusion Imaging (OSIPI) has developed a lexicon for contrast-agent perfusion MRI (CAPLEX). This lexicon was first developed using googledocs, but has now been migrated to a webpage hosted by github pages. The aim of the lexicon is to define standard terminology for quantities, models and processes used in perfusion MRI to reduce reporting variability. Through this effort, a general framework has been developed for lexiconography applied to MRI data. This repo hosts an extension of the OSIPI CAPLEX to diffusion MRI.  
 
 ## Repository contents
 The repo is in development but currently contains:
 
-1. the "editable" markdown (.md) files that define the webpage content (in the **/docs** directory).
-2. the "non-editable" backend for the CAPLEX webpage generated when .md files on main are deployed (found on the **gh-pages** branch)
-3. XML schema files (under development!!!) and examples for lexicon-linked algorithmic encoding (in the **/Algorithmic-encoding** directory)
+1. the "editable" markdown (.md) files that define the diffusion lexicon content (e.g. the webpage content in the **/docs** directory).
+2. the "non-editable" backend for the DiffusionLex webpage generated when .md files on main are deployed (found on the **gh-pages** branch)
 
 ## Contributing to the lexicon
 The lexicon is designed to the extensible and we actively engage researchers in diffusion MRI field to engage with its usage and development. If you would like to add or edit content (new entries etc.) of the lexicon, please either:
 1. contact Ben Dickie (ben.dickie@manchester.ac.uk) with your proposed changes. 
-2. or create a development branch of main and edit the .md files directly. Once done, submit a pull request (do not merge with main!), which will then be reviewed by the Task Force.
+2. or create a development branch of main and edit the .md files directly. Once done, submit a pull request (do not merge with main!), which will then be reviewed by the core development team. 
 3. or fork the repo, make the changes you want to make, then push back to the parent repo. This is recommended if you make regular changes. 
 
 ## Suggesting edits or additions to lexicon entries
